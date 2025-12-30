@@ -1,0 +1,56 @@
+@import "nes.css/css/nes.min.css";
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+body {
+  font-family: 'Press Start 2P', cursive;
+  background-color: #212529; /* Dark background for arcade feel */
+  color: #fff;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+#root {
+  width: 100%;
+  max-width: 800px;
+  padding: 20px;
+  text-align: center;
+}
+
+.pixel-card {
+  background-color: #fff;
+  color: #000;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  /* nes-container style override or augmentation */
+}
+
+/* Custom NES overrides if needed */
+.nes-btn.is-primary {
+  /* arcade red */
+  background-color: #e76e55; 
+  border-color: #e76e55; 
+  color: #fff;
+}
+.nes-btn.is-success {
+    background-color: #92cc41;
+}
+
+/* Animation for loading */
+@keyframes blink {
+  0% { opacity: 1; }
+  50% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+.blink {
+  animation: blink 1s infinite;
+}
+
+/* Fix NES input on dark bg */
+.nes-input {
+  background-color: #fff;
+  color: #333;
+}
